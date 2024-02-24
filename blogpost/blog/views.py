@@ -1,6 +1,13 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import BlogPost
+
 
 # Create your views here.
+
 def index(request):
-    return HttpResponse('My Home Page!')
+    # Fetch latest blog posts from the database
+    latest_posts = BlogPost.objects.all().order_by('-publication_date')[:5]
+
+    # Render the homepage template with the latest posts
+    return render(request, 'index.html', {'latest_posts': latest_posts})
+
