@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Welcome to Our Blog!</title>
-</head>
+{% extends 'base.html' %}
+{% load static %}
 <body>
-    <h1>Welcome to Our Blog!</h1>
     
-    <h2>Latest Posts:</h2>
-
+    
+    {% block content %}
+        <h2>Welcome to the Home Page</h2>
+        <p>This is the home page of My Django App.</p>
+    {% endblock %}
+    
 </body>
 </html>
 

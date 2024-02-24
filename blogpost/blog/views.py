@@ -11,3 +11,12 @@ def index(request):
     # Render the homepage template with the latest posts
     return render(request, 'index.html', {'latest_posts': latest_posts})
 
+def register(request):
+    return render(request, 'register.html')
+
+def login(request):
+    return(request, 'login.html')
+
+def logout(request):
+    return(request, logout.html)
+
