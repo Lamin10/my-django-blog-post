@@ -31,7 +31,8 @@ SECRET_KEY = 'django-insecure-jz52pmb3yw^)+m$q411r=inz6o9vksnvv*l_q+in$h3j52#^^%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['8000-lamin10-mydjangoblogpos-d2uqw7unxyd.ws-eu108.gitpod.io','.herokuapp.com']
+ALLOWED_HOSTS = ['8000-lamin10-mydjangoblogpos-9tn2fuejrfv.ws-eu108.gitpod.io','.herokuapp.com']
+CSRF_TRUSTED_ORIGINS=['https://8000-lamin10-mydjangoblogpos-9tn2fuejrfv.ws-eu108.gitpod.io']
 
 
 # Application definition
@@ -130,8 +131,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'static'),]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 
 # Default primary key field type
